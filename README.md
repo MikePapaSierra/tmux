@@ -1,44 +1,108 @@
-# tmux-config
+# Tmux Configuration
 
-Tmux configuration.
+![Made with Tmux](https://img.shields.io/badge/Made%20with-Tmux-1BB91F?logo=tmux&logoColor=white)
+![Plugin Manager: TPM](https://img.shields.io/badge/Plugin%20Manager-TPM-4C91F0)
+![Theme: Catppuccin](https://img.shields.io/badge/Theme-Catppuccin-FFC0CB)
+![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Config only](https://img.shields.io/badge/Configuration-Personal-informational)
 
-Here's how tmux looks like: ![Tmux console screenshot](/images/tmux-config-screenshot.png)
+---
 
-## Key binding
+This repository contains my personal configuration for [Tmux](https://github.com/tmux/tmux), a terminal multiplexer that allows efficient window, pane, and session management from the command line.
 
-<kbd>Ctrl</kbd> + <kbd>a</kbd> - Preffix key combination \
-<kbd>Ctrl</kbd>+ <kbd>a</kbd> <kbd>c</kbd> - Create new pane \
-<kbd>Ctrl</kbd> + <kbd>a</kbd> <kbd>n</kbd> - Switch to next pane \
-<kbd>Ctrl</kbd> + <kbd>a</kbd> <kbd>p</kbd> - Switch to previous pane \
-<kbd>Ctrl</kbd> + <kbd>w</kbd> - Kill current pane \
-<kbd>Ctrl</kbd> + <kbd>a</kbd> <kbd>r</kbd> - Reload tmux configuration \
-<kbd>Ctrl</kbd> + <kbd>a</kbd> <kbd>-</kbd>  - Split pane horizontally \
-<kbd>Ctrl</kbd> + <kbd>a</kbd> <kbd>|</kbd> - Split pane vertically \
-<kbd>Ctrl</kbd> + <kbd>h</kbd> - Move to left pane \
-<kbd>Ctrl</kbd> + <kbd>l</kbd> - Move to right pane \
-<kbd>Ctrl</kbd> + <kbd>j</kbd> - Move to up pane \
-<kbd>Ctrl</kbd> + <kbd>k</kbd> - Move to down pane \
-<kbd>Ctrl</kbd> + <kbd>a</kbd> <kbd>,</kbd> - Rename window name \
-<kbd>Ctrl</kbd> + <kbd>a</kbd> <kbd>w</kbd> - Display window list \
-<kbd>Ctrl</kbd> + <kbd>a</kbd> <kbd>s</kbd> - Display session list \
-<kbd>Ctrl</kbd> + <kbd>a</kbd> <kbd>l</kbd> - Jump lo last active window \
-<kbd>Ctrl</kbd> + <kbd>a</kbd> <kbd>L</kbd> - Jump lo last active pane \
-<kbd>Ctrl</kbd> + <kbd>a</kbd> <kbd>Space</kbd> - Toggle pane layout \
-<kbd>Ctrl</kbd> + <kbd>a</kbd> <kbd>z</kbd> - Toggle zoom in to the active pane \
-<kbd>Ctrl</kbd> + <kbd>v</kbd> - In scroll mode, change type of the visual mark between box and line \
-<kbd>v</kbd> - In scroll mode, start visual marking \
-<kbd>y</kbd> - In scroll mode, yank selected text \
-<kbd>Ctrl</kbd> + <kbd>v</kbd> - Paste yanked text \
+The configuration is visually themed with [Catppuccin](https://github.com/catppuccin/tmux) and powered by the [Tmux Plugin Manager (TPM)](https://github.com/tmux-plugins/tpm).
 
-## Inspiration
+## 📸 Preview
 
-My main inspiration to create this configuration was stream one of the AWS developer advocate [Darko Mesaros](https://github.com/darko-mesaros). Recording from that session can be found [here](https://www.youtube.com/watch?v=kPnYFsXml-I).
-Down the road I found those resources that inspired me to some changes:
-- [Dreams of Code](https://www.youtube.com/@dreamsofcode) where I'd found video [Tmux has forever changed the way I write code](https://www.youtube.com/watch?v=DzNmUNvnB04)
-- [DevOps Toolbox](https://www.youtube.com/@devopstoolbox) with videos [NINJA Level Productivity: Master Tmux in 7 Minutes](https://www.youtube.com/watch?v=UtINDdy-xBc) and [Tmux can do WHAT?? // Use THIS to Make Tmux AMAZING Instantly](https://www.youtube.com/watch?v=0z6akhNyguw)
+> Replace this with your screenshot or terminal cast:
 
-## TODO
-- Check [this](https://github.com/gpakosz/.tmux) configuration as a bese one
+![Tmux Screenshot](./screenshot.png)
 
-## License
-This code is distributed on [MIT License](/LICENSE).
+## 🎯 Purpose
+
+This setup is tailored for daily terminal use with a clean UI, sensible keybindings, and plugin support.  
+It is shared publicly for inspiration — feel free to **fork** and **adapt** it to your own needs!
+
+> **Note:** This is a personal configuration. Contributions are not accepted.
+
+---
+
+## 💾 Installation
+
+### 1. Install Tmux
+
+#### macOS
+
+```bash
+brew install tmux
+```
+
+#### Debian/Ubuntu
+
+```bash
+sudo apt install tmux
+```
+
+#### Arch Linux
+
+```bash
+sudo pacman -S tmux
+```
+
+### 2. Install TPM (Tmux Plugin Manager)
+
+```bash
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+### 3. Clone this configuration
+
+```bash
+git clone https://github.com/MikePapaSierra/tmux ~/.config/tmux
+```
+
+Then symlink the `.tmux.conf`:
+
+```bash
+ln -s ~/.config/tmux/tmux.conf ~/.tmux.conf
+```
+
+Or directly copy it:
+
+```bash
+cp ~/.config/tmux/tmux.conf ~/.tmux.conf
+```
+
+### 4. Install plugins
+
+Start Tmux, then press:
+
+```text
+Prefix (Ctrl-b by default) + I
+```
+
+This installs all plugins via TPM.
+
+---
+
+## 🧱 Structure
+
+- `tmux.conf` — main configuration file
+- `.config/tmux/` — repo location (if cloned this way)
+- Uses TPM to manage plugins
+- Includes embedded [Catppuccin](https://github.com/catppuccin/tmux) theme styling
+
+---
+
+## 🔧 Dependencies
+
+- [Tmux](https://github.com/tmux/tmux) — required
+- [TPM](https://github.com/tmux-plugins/tpm) — required for plugin management
+- [Catppuccin Tmux Theme](https://github.com/catppuccin/tmux) — included or referenced
+
+---
+
+## 📎 License
+
+This project is shared under the [MIT License](LICENSE), but primarily for reference. Fork freely!
+
