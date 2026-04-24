@@ -49,19 +49,15 @@ sudo apt install tmux
 sudo pacman -S tmux
 ```
 
-### 2. Install TPM (Tmux Plugin Manager)
-
-```bash
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-```
-
-### 3. Clone this configuration
+### 2. Clone this configuration
 
 ```bash
 git clone https://github.com/MikePapaSierra/tmux ~/.config/tmux
 ```
 
-Then symlink the `.tmux.conf`:
+### 3. Link the configuration
+
+Symlink `.tmux.conf`:
 
 ```bash
 ln -s ~/.config/tmux/tmux.conf ~/.tmux.conf
@@ -73,15 +69,21 @@ Or directly copy it:
 cp ~/.config/tmux/tmux.conf ~/.tmux.conf
 ```
 
-### 4. Install plugins
+### 4. Install TPM (Tmux Plugin Manager)
+
+```bash
+git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+```
+
+### 5. Install plugins
 
 Start Tmux, then press:
 
 ```text
-Prefix (Ctrl-b by default) + I
+Prefix (Ctrl-a in this config) + I
 ```
 
-This installs all plugins via TPM.
+This installs the remaining plugins via TPM.
 
 ---
 
@@ -89,8 +91,8 @@ This installs all plugins via TPM.
 
 - `tmux.conf` — main configuration file
 - `.config/tmux/` — repo location (if cloned this way)
-- Uses TPM to manage plugins
-- Includes embedded [Catppuccin](https://github.com/catppuccin/tmux) theme styling
+- Uses TPM to manage plugins in `~/.config/tmux/plugins/`
+- Includes the [Catppuccin](https://github.com/catppuccin/tmux) theme via TPM
 
 ---
 
@@ -98,11 +100,11 @@ This installs all plugins via TPM.
 
 - [Tmux](https://github.com/tmux/tmux) — required
 - [TPM](https://github.com/tmux-plugins/tpm) — required for plugin management
-- [Catppuccin Tmux Theme](https://github.com/catppuccin/tmux) — included or referenced
+- [Catppuccin Tmux Theme](https://github.com/catppuccin/tmux) — installed via TPM
+- TPM-managed plugins are installed locally in `~/.config/tmux/plugins/` and are not tracked by this repository
 
 ---
 
 ## 📎 License
 
 This project is shared under the [MIT License](LICENSE), but primarily for reference. Fork freely!
-
