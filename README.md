@@ -109,6 +109,7 @@ The prefix is `Ctrl-a`. Pane navigation follows Vim keys: `Prefix h`, `j`,
 | Last active pane | `Prefix ;` |
 | Copy mode | `Prefix [` |
 | Zoom/unzoom pane | `Prefix z` |
+| Open OpenCode in the current directory | `Prefix O` |
 
 `Prefix a` and `Prefix v` are base-layer aliases for the Corne split
 keyboard. The original symbol-layer split keys remain available, so the same
